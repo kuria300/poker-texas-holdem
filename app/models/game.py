@@ -1,9 +1,9 @@
 import time
 import random
-from deck import Deck
-from player import Player
+from .deck import Deck
+from .player import Player
 from treys import Card as TreysCard, Evaluator
-from card import Card
+from .card import Card
 
 class Game:
     def __init__(self):

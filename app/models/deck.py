@@ -1,5 +1,5 @@
 import random 
-from card import Card
+from .card import Card
 # this class contains all the cards insisde a deck box 52
 class Deck:
     def __init__(self):
