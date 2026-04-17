@@ -16,6 +16,16 @@ class Player:
     def fold(self):
         self.folded = True
         return self.folded
+    def bet(self, amount_of_chips):
+        if not isinstance(amount_of_chips, int):
+            raise TypeError('value not of type int')
+        amount_bet= amount_of_chips - self.track_bet
+        if amount_bet > self.chips:
+            # go all in
+            amount_bet= self.chips
+        self.chips-=amount_bet
+        self.track_bet+= amount_bet
+        return amount_bet
             
     def call(self, amount_of_chips):
         if not isinstance(amount_of_chips, int):
